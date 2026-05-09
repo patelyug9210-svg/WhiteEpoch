@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhiteEpoch - 3D Room Generator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">
+                    <span class="logo-icon">✨</span>
+                    <span class="logo-text">WhiteEpoch</span>
+                </h1>
+                <p class="tagline">Generate immersive 3D spaces with AI</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Input Section -->
+            <section class="input-section">
+                <div class="input-container">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="promptInput" 
+                            class="prompt-input" 
+                            placeholder="Describe your ideal room... (e.g., 'modern minimalist office with plants')"
+                            autocomplete="off"
+                        >
+                        <button id="generateBtn" class="generate-btn">
+                            <span class="btn-text">Generate Room</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </div>
+                    <div class="input-hints">
+                        <span class="hint">💡 Try: "cozy bedroom with fireplace"</span>
+                        <span class="hint">💡 Try: "futuristic tech room"</span>
+                        <span class="hint">💡 Try: "luxury lounge with ocean view"</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3D Canvas and Info Section -->
+            <section class="generation-section">
+                <div class="canvas-wrapper">
+                    <canvas id="canvas"></canvas>
+                    <div class="loading-spinner" id="loadingSpinner" style="display: none;">
+                        <div class="spinner"></div>
+                        <p>Generating your 3D space...</p>
+                    </div>
+                    <div class="canvas-info">
+                        <p class="info-text">Use mouse to rotate • Scroll to zoom</p>
+                    </div>
+                </div>
+
+                <!-- Room Info Panel -->
+                <div class="info-panel">
+                    <div class="info-header">
+                        <h2>Room Details</h2>
+                    </div>
+                    <div class="info-body">
+                        <div id="roomInfo" class="room-info">
+                            <p class="placeholder-text">Your generated room details will appear here</p>
+                        </div>
+                        <div class="controls-section">
+                            <h3>Controls</h3>
+                            <ul class="controls-list">
+                                <li><strong>Mouse Drag:</strong> Rotate view</li>
+                                <li><strong>Scroll:</strong> Zoom in/out</li>
+                                <li><strong>Space:</strong> Animate character</li>
+                                <li><strong>R:</strong> Reset view</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 WhiteEpoch. Powered by Three.js & AI</p>
+        </footer>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
